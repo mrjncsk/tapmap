@@ -1,8 +1,15 @@
 ## Unreleased
 
+## 1.14.2 - 2026-09-22
+
 ### Distribution
 
 - Make TapMap available through the official Homebrew Cask repository with `brew install --cask tapmap`.
+
+### Fixes
+
+- Clear cached GeoIP lookup results when the databases are reloaded.
+- Prevent TapMap's single-letter keyboard shortcuts from triggering when Ctrl, Cmd, or Alt is held.
 
 ## 1.14.1 - 2026-09-17
 
