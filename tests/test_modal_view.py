@@ -35,7 +35,7 @@ def test_for_click_does_not_prepend_its_own_coordinate_line() -> None:
 
 def test_for_click_renders_color_span_as_html_span() -> None:
     """Embedded '<span style=color>' markup becomes a real colored html.Span, not literal text."""
-    detail = 'Network operator: Org A\n    <span style="color:#00ff66">■</span> App A'
+    detail = 'Network operator: Org A\n    <span style="color:#94e2d5">■</span> App A'
     view = {"details": {"0": detail}}
 
     result = _builder().for_click(_click_data(), view, is_docker=False)
@@ -43,7 +43,7 @@ def test_for_click_renders_color_span_as_html_span() -> None:
     children = result.children
     span = next(c for c in children if isinstance(c, html.Span))
     assert span.children == "■"
-    assert span.style == {"color": "#00ff66"}
+    assert span.style == {"color": "#94e2d5"}
     assert not any(isinstance(c, str) and "<span" in c for c in children)
 
 
@@ -51,7 +51,7 @@ def test_for_click_renders_multi_character_color_span_as_html_span() -> None:
     """A multi-character colored span (e.g. verification status text) renders as one html.Span."""
     detail = (
         'Firefox (Mozilla Corporation, '
-        '<span style="color:#00ff66">Trusted and signed</span>)'
+        '<span style="color:#94e2d5">Trusted and signed</span>)'
     )
     view = {"details": {"0": detail}}
 
@@ -60,7 +60,7 @@ def test_for_click_renders_multi_character_color_span_as_html_span() -> None:
     children = result.children
     span = next(c for c in children if isinstance(c, html.Span))
     assert span.children == "Trusted and signed"
-    assert span.style == {"color": "#00ff66"}
+    assert span.style == {"color": "#94e2d5"}
     assert "Firefox (Mozilla Corporation, " in children
     assert ")" in children
 

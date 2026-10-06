@@ -15,19 +15,19 @@ from tapmap.ui.formatting import (
 
 def test_verification_status_color_pending_is_white() -> None:
     """A pending verification status renders as white, distinct from unknown's yellow."""
-    assert verification_status_color(PENDING_VERIFICATION_STATUS) == "#ffffff"
+    assert verification_status_color(PENDING_VERIFICATION_STATUS) == "#cdd6f4"
 
 
 def test_verification_status_color_unknown_is_yellow() -> None:
     """An unresolved-but-terminal (unknown) status stays yellow, not white."""
-    assert verification_status_color("unknown") == "#ffff00"
-    assert verification_status_color(None) == "#ffff00"
+    assert verification_status_color("unknown") == "#f9e2af"
+    assert verification_status_color(None) == "#f9e2af"
 
 
 def test_verification_status_glyph_pending_is_white_bullet() -> None:
     """The pending glyph is a colored bullet using the white pending color."""
     assert verification_status_glyph(PENDING_VERIFICATION_STATUS) == (
-        '<span style="color:#ffffff">■</span>'
+        '<span style="color:#cdd6f4">■</span>'
     )
 
 

@@ -286,7 +286,7 @@ def test_build_app_summary_uses_colored_bullet_verification_indicator() -> None:
 
     apps_line = summary.split("<br>")[2]
     assert "■" in apps_line
-    assert "#00ff66" in apps_line
+    assert "#94e2d5" in apps_line
 
 
 def test_build_app_summary_aligns_app_value_with_other_rows() -> None:
@@ -825,7 +825,7 @@ def test_format_app_line_colorizes_only_the_verification_status_text() -> None:
 
     assert line == (
         'Firefox (Mozilla Corporation, '
-        '<span style="color:#00ff66">Trusted and signed</span>)'
+        '<span style="color:#94e2d5">Trusted and signed</span>)'
     )
 
 
@@ -841,7 +841,7 @@ def test_format_app_line_uses_failed_color_for_unsigned() -> None:
 
     line = ServicePointViewBuilder()._format_app_line(app)
 
-    assert '<span style="color:#ff4444">Unsigned</span>' in line
+    assert '<span style="color:#f38ba8">Unsigned</span>' in line
 
 
 def test_build_app_click_details_includes_verification_status_note() -> None:
@@ -956,7 +956,7 @@ def test_format_app_line_pending_shows_white_bullet_and_retrieving_text() -> Non
 
     line = ServicePointViewBuilder()._format_app_line(app)
 
-    assert '<span style="color:#ffffff">Retrieving...</span>' in line
+    assert '<span style="color:#cdd6f4">Retrieving...</span>' in line
 
 
 def test_format_app_line_pending_creator_shows_retrieving() -> None:
@@ -1000,7 +1000,7 @@ def test_build_app_summary_pending_app_shows_white_bullet() -> None:
     )
 
     apps_line = summary.split("<br>")[2]
-    assert "#ffffff" in apps_line
+    assert "#cdd6f4" in apps_line
 
 
 def test_app_verification_status_priority_orders_pending_between_unknown_and_verified() -> None:

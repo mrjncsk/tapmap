@@ -219,7 +219,7 @@ def test_verification_bullet_renders_glyph_color_and_tooltip_for_a_resolved_stat
     span = _verification_span(_rows(table)[0].children[5])
 
     assert span.children == "■"
-    assert span.style["color"] == "#00ff66"
+    assert span.style["color"] == "#94e2d5"
     assert span.title == "Verified"
 
 
@@ -229,7 +229,7 @@ def test_verification_bullet_shows_unknown_not_pending_for_a_null_persisted_stat
 
     span = _verification_span(_rows(table)[0].children[5])
 
-    assert span.style["color"] == "#ffff00"
+    assert span.style["color"] == "#f9e2af"
     assert span.title == "Unknown"
 
 
