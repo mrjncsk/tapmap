@@ -27,31 +27,31 @@ def _build_applications_figure(
             x=values,
             y=categories,
             orientation="h",
-            marker_color="rgba(0,160,68,0.55)",
-            marker_line_color="rgba(0,80,30,0.9)",
+            marker_color="rgba(148,226,213,0.55)",
+            marker_line_color="rgba(30,80,80,0.9)",
             marker_line_width=2,
         )
     )
     fig.update_layout(
-        paper_bgcolor="#020602",
-        plot_bgcolor="#010401",
-        font=dict(family=_MONO, color="#00ff66"),
+        paper_bgcolor="#0a1628",
+        plot_bgcolor="#0a192f",
+        font=dict(family=_MONO, color="#94e2d5"),
         height=320,
         margin=dict(l=140, r=40, t=20, b=40),
         yaxis=dict(
             automargin=True,
             ticklabelstandoff=20,
-            gridcolor="rgba(0,170,68,0.15)",
-            tickcolor="#00ff66",
+            gridcolor="rgba(148,226,213,0.15)",
+            tickcolor="#94e2d5",
             fixedrange=True,
         ),
         xaxis=dict(
             title="Number of applications",
             showgrid=True,
-            gridcolor="rgba(0,170,68,0.35)",
+            gridcolor="rgba(148,226,213,0.35)",
             gridwidth=1,
-            zerolinecolor="rgba(0,170,68,0.5)",
-            tickcolor="#00ff66",
+            zerolinecolor="rgba(148,226,213,0.5)",
+            tickcolor="#94e2d5",
             fixedrange=True,
         ),
     )
@@ -70,18 +70,18 @@ def _build_concentration_figure(
                 x=list(range(1, total_providers + 1)),
                 y=cumulative_pcts,
                 mode="lines",
-                line=dict(color="rgba(0,220,88,0.90)", width=2),
+                line=dict(color="rgba(148,226,213,0.90)", width=2),
                 fill="tozeroy",
-                fillcolor="rgba(0,160,68,0.12)",
+                fillcolor="rgba(148,226,213,0.12)",
                 hovertemplate="Top %{x} providers: %{y:.0f}%<extra></extra>",
                 showlegend=False,
             )
         )
 
     fig.update_layout(
-        paper_bgcolor="#020602",
-        plot_bgcolor="#010401",
-        font=dict(family=_MONO, color="#00ff66"),
+        paper_bgcolor="#0a1628",
+        plot_bgcolor="#0a192f",
+        font=dict(family=_MONO, color="#94e2d5"),
         height=220,
         margin=dict(l=60, r=20, t=10, b=50),
         showlegend=False,
@@ -92,7 +92,7 @@ def _build_concentration_figure(
                 x1=max(total_providers, 1),
                 y0=80,
                 y1=80,
-                line=dict(color="rgba(0,200,80,0.75)", width=1.5, dash="dot"),
+                line=dict(color="rgba(148,226,213,0.75)", width=1.5, dash="dot"),
             )
         ],
         annotations=[
@@ -106,31 +106,31 @@ def _build_concentration_figure(
                 xanchor="right",
                 yanchor="bottom",
                 xshift=-12,
-                font=dict(size=9, color="rgba(0,210,84,0.88)", family=_MONO),
+                font=dict(size=9, color="rgba(148,226,213,0.88)", family=_MONO),
             )
         ],
         xaxis=dict(
-            title=dict(text="Providers (sorted by activity)", font=dict(color="#00ff66")),
+            title=dict(text="Providers (sorted by activity)", font=dict(color="#94e2d5")),
             showgrid=True,
-            gridcolor="rgba(0,170,68,0.35)",
+            gridcolor="rgba(148,226,213,0.35)",
             gridwidth=1,
             showline=True,
-            linecolor="rgba(0,170,68,0.5)",
-            tickcolor="#00ff66",
-            tickfont=dict(color="#00ff66"),
+            linecolor="rgba(148,226,213,0.5)",
+            tickcolor="#94e2d5",
+            tickfont=dict(color="#94e2d5"),
             zeroline=False,
             fixedrange=True,
         ),
         yaxis=dict(
-            title=dict(text="Activity covered", font=dict(color="#00ff66")),
+            title=dict(text="Activity covered", font=dict(color="#94e2d5")),
             range=[0, 100],
             showgrid=True,
-            gridcolor="rgba(0,170,68,0.35)",
+            gridcolor="rgba(148,226,213,0.35)",
             gridwidth=1,
             showline=True,
-            linecolor="rgba(0,170,68,0.5)",
-            tickcolor="#00ff66",
-            tickfont=dict(color="#00ff66"),
+            linecolor="rgba(148,226,213,0.5)",
+            tickcolor="#94e2d5",
+            tickfont=dict(color="#94e2d5"),
             zeroline=False,
             ticksuffix="%",
             fixedrange=True,
@@ -157,28 +157,28 @@ def _build_countries_figure(
             mode="markers",
             marker=dict(
                 size=[_scale(d) for d in days],
-                color="#00cc52",
+                color="#94e2d5",
                 opacity=0.75,
-                line=dict(width=1.5, color="rgba(0,60,20,0.85)"),
+                line=dict(width=1.5, color="rgba(30,60,60,0.85)"),
             ),
             hovertemplate="<b>%{customdata[0]}</b>: %{customdata[1]}d<extra></extra>",
             customdata=list(zip(codes, days, strict=True)),
         )
     )
     fig.update_layout(
-        paper_bgcolor="#010201",
+        paper_bgcolor="#0a1628",
         height=420,
         margin=dict(l=0, r=0, t=10, b=0),
         showlegend=False,
         geo=dict(
-            bgcolor="#010201",
+            bgcolor="#0a1628",
             showframe=False,
             showcoastlines=True,
-            coastlinecolor="#145214",
+            coastlinecolor="#1a4a3a",
             showland=True,
-            landcolor="#0f4a0f",
+            landcolor="#1e5a3e",
             showocean=True,
-            oceancolor="#010201",
+            oceancolor="#0a192f",
             showlakes=False,
             showcountries=False,
             projection_type="natural earth",
@@ -201,7 +201,7 @@ def _render_recurrence_examples(
                 f"{MIN_APPENDIX_HISTORY_DAYS} days of connection history are available.",
                 style={
                     "fontSize": "11px",
-                    "color": "rgba(0,220,88,0.55)",
+                    "color": "rgba(148,226,213,0.55)",
                     "marginLeft": "140px",
                     "fontStyle": "italic",
                 },
@@ -218,7 +218,7 @@ def _render_recurrence_examples(
             detail: list[Any] = [
                 html.Span(
                     name,
-                    style={"color": "rgba(0,220,88,0.85)", "fontSize": "11px"},
+                    style={"color": "rgba(148,226,213,0.85)", "fontSize": "11px"},
                 ),
                 html.Div(
                     [
@@ -236,7 +236,7 @@ def _render_recurrence_examples(
                 html.Span(
                     "no examples yet",
                     style={
-                        "color": "rgba(0,180,70,0.45)",
+                        "color": "rgba(30,120,110,0.45)",
                         "fontSize": "11px",
                         "fontStyle": "italic",
                     },
@@ -253,7 +253,7 @@ def _render_recurrence_examples(
                     style={
                         "fontSize": "12px",
                         "fontWeight": "600",
-                        "color": "rgba(0,220,88,0.90)",
+                        "color": "rgba(148,226,213,0.90)",
                         "margin": "0 0 10px 0",
                         "letterSpacing": "0.02em",
                     },
@@ -264,7 +264,7 @@ def _render_recurrence_examples(
                     "Filled squares show days where activity was recorded.",
                     style={
                         "fontSize": "11px",
-                        "color": "rgba(0,220,88,0.85)",
+                        "color": "rgba(148,226,213,0.85)",
                         "margin": "14px 0 0 0",
                         "lineHeight": "1.35",
                     },

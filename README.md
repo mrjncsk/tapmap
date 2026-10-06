@@ -4,7 +4,7 @@
 
 # TapMap
 
-[![Latest version](https://img.shields.io/github/v/release/olalie/tapmap)](https://github.com/olalie/tapmap/releases) [![platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS-blue)](https://github.com/olalie/tapmap/releases) [![Docker Pulls](https://img.shields.io/docker/pulls/olalie/tapmap)](https://hub.docker.com/r/olalie/tapmap) [![License](https://img.shields.io/github/license/olalie/tapmap?cacheSeconds=0)](https://github.com/olalie/tapmap/blob/main/LICENSE)
+[![Latest version](https://img.shields.io/github/v/release/mrjncsk/tapmap)](https://github.com/mrjncsk/tapmap/releases) [![platforms](https://img.shields.io/badge/platform-Linux-blue)](https://github.com/mrjncsk/tapmap/releases) [![License](https://img.shields.io/github/license/mrjncsk/tapmap?cacheSeconds=0)](https://github.com/mrjncsk/tapmap/blob/main/LICENSE)
 
 ![TapMap demo](docs/images/demo.gif)
 
@@ -12,7 +12,7 @@ Featured in: [How-To Geek](https://www.howtogeek.com/this-self-hosted-global-map
 
 **Watch your computer connect across the internet in real time. Discover the world behind your apps.**
 
-Runs locally. No telemetry. Docker supported on Linux.
+Runs locally. No telemetry. Docker supported.
 
 TapMap inspects local socket data, enriches IP addresses with geolocation, and visualizes the locations on an interactive map.
 
@@ -27,36 +27,20 @@ It makes network activity visible and easy to explore.
 
 #### Desktop
 
-Choose an installation method for your platform.
-
-**Windows**
-
-Download and run the Windows installer from the [Releases page](https://github.com/olalie/tapmap/releases).
-
-Windows may show a SmartScreen warning the first time you open the installer. See [Windows SmartScreen](#windows-smartscreen).
-
-**macOS**
-
-Install with Homebrew:
-
-    brew install --cask tapmap
-
-Alternatively, download the appropriate `.dmg` image from the [Releases page](https://github.com/olalie/tapmap/releases), open it, and drag **TapMap** to **Applications**.
-
 **Linux**
 
-Download and install the `.deb` package from the [Releases page](https://github.com/olalie/tapmap/releases).
+Download and install the `.deb` package from the [Releases page](https://github.com/mrjncsk/tapmap/releases).
 
-#### Docker (Linux host only)
+#### Docker
 
     docker run --rm \
     --network host \
     --pid host \
     -v ~/tapmap-data:/data \
     -e TAPMAP_IN_DOCKER=1 \
-    olalie/tapmap:latest
+    ghcr.io/mrjncsk/tapmap:latest
 
-For Docker configuration, updates, process visibility, and Docker Compose usage, see [Docker](https://olalie.github.io/tapmap/docker/).
+For Docker configuration, updates, and Docker Compose usage, see [Docker](https://olalie.github.io/tapmap/docker/).
 
 ---
 
@@ -166,7 +150,7 @@ http://127.0.0.1:8050/
 
 If it does not open automatically, enter the address manually.
 
-TapMap keeps running after you close the browser tab or window. Use the system tray icon (menu bar on macOS) to open or quit TapMap.
+TapMap keeps running after you close the browser tab or window. Use the system tray icon to open or quit TapMap.
 
 **Run TapMap automatically** starts TapMap at login. It is enabled by default after a fresh installation and can be changed from the **TOOLS** menu. When started automatically, TapMap runs in the background without opening the browser.
 
@@ -277,20 +261,17 @@ For details, see [PRIVACY.md](PRIVACY.md).
 
 ## Platforms and builds
 
-Download the latest version from the [Releases page](https://github.com/olalie/tapmap/releases).
+Download the latest version from the [Releases page](https://github.com/mrjncsk/tapmap/releases).
 
 Available downloads:
 
-- Windows installer
 - Linux (.deb)
-- macOS (Apple Silicon)
-- macOS (Intel)
+- Docker image (linux/amd64, linux/arm64)
 
 Tested on:
 
-- Windows 11
 - Ubuntu
-- macOS (Apple Silicon)
+- Debian
 
 Community testing has confirmed support on additional platforms and architectures.
 
@@ -304,19 +285,6 @@ Command-line options:
     tapmap --no-browser
 
     tapmap --configure-mqtt
-
----
-
-## Windows SmartScreen
-
-Windows may show a SmartScreen warning the first time you run the TapMap installer.
-
-This can happen until Windows has built enough reputation for the installer.
-
-To continue:
-
-1. Click **More info**.
-2. Click **Run anyway**.
 
 ---
 
@@ -336,17 +304,12 @@ Create a virtual environment:
 
 Activate it:
 
-    source .venv/bin/activate   (Linux/macOS)
-    .venv\Scripts\activate      (Windows)
+    source .venv/bin/activate
 
 Install dependencies:
 
     pip install -r requirements-tests.txt
     pip install -e .
-
-On Linux, also install the system tray dependencies:
-
-    pip install -r requirements-linux-desktop.txt
 
 Run:
 

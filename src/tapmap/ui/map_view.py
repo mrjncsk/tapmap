@@ -23,13 +23,13 @@ class MapUI:
     )
     VALUES: Final[tuple[int, ...]] = (1,) * len(COUNTRY_CODES)
 
-    COLOR_NORMAL: Final[str] = "#FF00FF"
-    COLOR_ME: Final[str] = "#00FFFF"
-    COLOR_ZOOM: Final[str] = "#FFFF00"
+    COLOR_NORMAL: Final[str] = "#cba6f7"
+    COLOR_ME: Final[str] = "#89b4fa"
+    COLOR_ZOOM: Final[str] = "#fab387"
 
-    HOVER_BG: Final[str] = "#000000"
-    HOVER_BORDER: Final[str] = "#00aa44"
-    HOVER_FONT: Final[str] = "#00ff66"
+    HOVER_BG: Final[str] = "#1e1e2e"
+    HOVER_BORDER: Final[str] = "#45475a"
+    HOVER_FONT: Final[str] = "#94e2d5"
 
     EARTH_RADIUS_KM: Final[float] = 6371.0
 
@@ -74,7 +74,7 @@ class MapUI:
         selected_country: str | None
     ) -> None:
         """Add world layer. Highlight selected country when provided."""
-        line_colors = ["#66FF66"] * len(self.COUNTRY_CODES)
+        line_colors = ["#3a7d5c"] * len(self.COUNTRY_CODES)
         line_widths = [0.5] * len(self.COUNTRY_CODES)
 
         if isinstance(selected_country, str):
@@ -93,7 +93,7 @@ class MapUI:
                 locations=self.COUNTRY_CODES,
                 z=self.VALUES,
                 showscale=False,
-                colorscale=[[0, "#00AA00"], [1, "#00AA00"]],
+                colorscale=[[0, "#1e5a3e"], [1, "#1e5a3e"]],
                 marker_line_color=line_colors,
                 marker_line_width=line_widths,
                 hoverinfo="skip",
@@ -272,8 +272,8 @@ class MapUI:
             showcoastlines=False,
             showland=False,
             showlakes=True,
-            lakecolor="black",
-            bgcolor="black",
+            lakecolor="#0a192f",
+            bgcolor="#0a192f",
         )
 
         if camera_center is not None:

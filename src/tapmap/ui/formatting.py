@@ -76,11 +76,11 @@ def country_flag(code: str | None) -> str:
 PENDING_VERIFICATION_STATUS = "pending"
 
 _VERIFICATION_STATUS_COLORS = {
-    "verified": "#00ff66",
-    "failed": "#ff4444",
-    PENDING_VERIFICATION_STATUS: "#ffffff",
+    "verified": "#94e2d5",
+    "failed": "#f38ba8",
+    PENDING_VERIFICATION_STATUS: "#cdd6f4",
 }
-_UNKNOWN_VERIFICATION_STATUS_COLOR = "#ffff00"
+_UNKNOWN_VERIFICATION_STATUS_COLOR = "#f9e2af"
 
 
 def verification_status_color(verification_status: str | None) -> str:

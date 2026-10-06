@@ -5,24 +5,24 @@
   box-sizing: border-box;
 }
 :root {
-  --mx-green: #00ff66;
-  --mx-green-soft: rgba(0, 255, 102, 0.55);
-  --mx-green-faint: rgba(0, 255, 102, 0.18);
+  --mx-green: #94e2d5;
+  --mx-green-soft: rgba(148, 226, 213, 0.55);
+  --mx-green-faint: rgba(148, 226, 213, 0.18);
 
-  --mx-border: rgba(0, 170, 68, 0.95);
-  --mx-border-strong: rgba(0, 255, 102, 0.95);
+  --mx-border: rgba(30, 120, 110, 0.95);
+  --mx-border-strong: rgba(148, 226, 213, 0.95);
 
-  --mx-bg: #020602;
-  --mx-bg-hover: #041004;
-  --mx-bg-2: #010401;
+  --mx-bg: #0a1628;
+  --mx-bg-hover: #0f2035;
+  --mx-bg-2: #0a192f;
 
   --mx-overlay: rgba(0, 0, 0, 0.62);
 
   --mx-shadow: 0 10px 36px rgba(0, 0, 0, 0.65);
-  --mx-shadow-soft: 0 0 12px rgba(0, 255, 102, 0.14);
+  --mx-shadow-soft: 0 0 12px rgba(148, 226, 213, 0.14);
 
-  --mx-glow-hover: 0 0 8px rgba(0, 255, 102, 0.22);
-  --mx-glow-strong: 0 0 12px rgba(0, 255, 102, 0.32);
+  --mx-glow-hover: 0 0 8px rgba(148, 226, 213, 0.22);
+  --mx-glow-strong: 0 0 12px rgba(148, 226, 213, 0.32);
 
   --mx-radius: 10px;
   --mx-radius-lg: 12px;
@@ -86,7 +86,7 @@ body {
   font-weight: 650;
   user-select: none;
   pointer-events: none;
-  text-shadow: 0 0 10px rgba(0, 255, 102, 0.18);
+  text-shadow: 0 0 10px rgba(148, 226, 213, 0.18);
 }
 
 /* key_capture input: hide the Dash-generated container entirely.
@@ -174,14 +174,14 @@ body {
 .mx-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
-    border-color: rgba(0, 170, 68, 0.8);
-    color: rgba(0, 255, 102, 0.8);
+    border-color: rgba(30, 120, 110, 0.8);
+    color: rgba(148, 226, 213, 0.8);
     box-shadow: none;
 }
 
 .mx-btn:disabled:hover {
     background: var(--mx-bg);
-    border-color: rgba(0, 170, 68, 0.8);
+    border-color: rgba(30, 120, 110, 0.8);
     box-shadow: none;
 }
 
@@ -214,7 +214,7 @@ a.mx-btn {
   z-index: 20;
   min-width: 200px;
   padding: 10px;
-  background: linear-gradient(180deg, rgba(2, 10, 2, 0.92), rgba(2, 6, 2, 0.92));
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.92), rgba(10, 25, 47, 0.92));
   border: 1px solid var(--mx-border);
   border-radius: var(--mx-radius-lg);
   box-shadow: var(--mx-shadow);
@@ -294,8 +294,8 @@ summary.mx-acc-header:hover {
   width: 270px;
   padding: 12px;
   color: var(--mx-green);
-  background: rgba(10, 20, 10, 0.85);
-  border-left: 1px solid var(--mx-green-faint);
+  background: rgba(10, 25, 47, 0.85);
+  border-left: 1px solid rgba(148, 226, 213, 0.15);
   z-index: 5;
   overflow-y: auto;
   /* animation */
@@ -416,7 +416,7 @@ summary.mx-acc-header:hover {
   max-height: var(--mx-modal-max-h);
   overflow: hidden;
   padding: 0;
-  background: linear-gradient(180deg, rgba(2, 10, 2, 0.95), rgba(2, 6, 2, 0.95));
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.95), rgba(10, 25, 47, 0.95));
   border: 1px solid var(--mx-border);
   border-radius: var(--mx-radius-lg);
   box-shadow: var(--mx-shadow);
@@ -449,7 +449,7 @@ summary.mx-acc-header:hover {
 
 .modal-body h1 {
   margin: 0 0 8px 0;
-  text-shadow: 0 0 10px rgba(0, 255, 102, 0.12);
+  text-shadow: 0 0 10px rgba(148, 226, 213, 0.12);
 }
 
 .modal-body h2 {
@@ -491,7 +491,7 @@ summary.mx-acc-header:hover {
   align-items: center;
   flex-wrap: wrap;
   padding: 6px var(--mx-pad-x);
-  border-top: 1px solid rgba(0, 170, 68, 0.8);
+  border-top: 1px solid rgba(30, 120, 110, 0.8);
   background: var(--mx-bg);
 }
 
@@ -511,7 +511,7 @@ summary.mx-acc-header:hover {
   background: linear-gradient(180deg, rgba(2, 10, 2, 0.98), rgba(2, 6, 2, 0.98));
   margin: 0 0 8px 0;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(0, 170, 68, 0.8);
+  border-bottom: 1px solid rgba(30, 120, 110, 0.8);
 }
 
 /* GeoDB provider cards */
@@ -553,7 +553,7 @@ summary.mx-acc-header:hover {
 .mx-geodb-card__header h2 {
   margin: 0;
   font-size: 1rem;
-  text-shadow: 0 0 10px rgba(0, 255, 102, 0.12);
+  text-shadow: 0 0 10px rgba(148, 226, 213, 0.12);
 }
 
 .mx-pill {
@@ -567,7 +567,7 @@ summary.mx-acc-header:hover {
   background: transparent;
   color: var(--mx-green);
   opacity: 0.95;
-  text-shadow: 0 0 10px rgba(0, 255, 102, 0.12);
+  text-shadow: 0 0 10px rgba(148, 226, 213, 0.12);
   transform: translateY(-1px);
   white-space: nowrap;
 }
@@ -620,9 +620,9 @@ summary.mx-acc-header:hover {
   margin-top: 8px;
   padding-top: 8px;
   min-height: 1.25rem;
-  border-top: 1px solid rgba(0, 170, 68, 0.3);
+  border-top: 1px solid rgba(30, 120, 110, 0.3);
   font-size: 0.8rem;
-  color: rgba(0, 255, 102, 0.65);
+  color: rgba(148, 226, 213, 0.65);
 }
 
 .mx-status__value {
@@ -634,7 +634,7 @@ summary.mx-acc-header:hover {
 .mx-manual-install {
   margin-top: 4px;
   padding-top: 14px;
-  border-top: 1px solid rgba(0, 170, 68, 0.45);
+  border-top: 1px solid rgba(30, 120, 110, 0.45);
 }
 
 .mx-manual-actions {
@@ -651,7 +651,7 @@ summary.mx-acc-header:hover {
 .mx-manual-install ol {
   margin: 0 0 10px 0;
   padding-left: 1.4em;
-  color: rgba(0, 255, 102, 0.8);
+  color: rgba(148, 226, 213, 0.8);
   font-size: 0.9rem;
   line-height: 1.7;
 }
@@ -762,13 +762,13 @@ summary.mx-acc-header:hover {
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-  background: rgba(0, 170, 68, 0.8);
+  background: rgba(30, 120, 110, 0.8);
   border: 2px solid var(--mx-bg-2);
   border-radius: 10px;
 }
 
 .modal-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 255, 102, 0.75);
+  background: rgba(148, 226, 213, 0.75);
 }
 
 /* Header controls */
@@ -810,16 +810,16 @@ summary.mx-acc-header:hover {
 
 .modal-body a,
 .modal-body a:visited {
-  color: rgba(0, 255, 102, 0.92);
+  color: rgba(148, 226, 213, 0.92);
   text-decoration: underline;
-  text-decoration-color: rgba(0, 255, 102, 0.55);
+  text-decoration-color: rgba(148, 226, 213, 0.55);
   text-underline-offset: 2px;
 }
 
 .modal-body a:hover,
 .modal-body a:active {
-  color: #66ff99;
-  text-decoration-color: rgba(0, 255, 102, 0.95);
+  color: #94e2d5;
+  text-decoration-color: rgba(148, 226, 213, 0.95);
 }
 
 /* Tables */
@@ -835,7 +835,7 @@ summary.mx-acc-header:hover {
 
 .mx-table th,
 .mx-table td {
-  border: 1px solid rgba(0, 170, 68, 0.8);
+  border: 1px solid rgba(30, 120, 110, 0.8);
   padding: 6px 8px;
   text-align: left;
   vertical-align: top;
@@ -848,10 +848,10 @@ summary.mx-acc-header:hover {
   position: sticky;
   top: 0;
   z-index: 2;
-  background: rgba(2, 6, 2, 0.98);
+  background: rgba(10, 25, 47, 0.98);
   font-size: larger;
-  border-color: rgba(0, 255, 102, 0.35);
-  box-shadow: 0 1px 0 rgba(0, 255, 102, 0.12);
+  border-color: rgba(148, 226, 213, 0.35);
+  box-shadow: 0 1px 0 rgba(148, 226, 213, 0.12);
 }
 .modal-body.mx-sticky-title .mx-table thead th {
   top: var(--mx-sticky-top);
@@ -890,7 +890,7 @@ summary.mx-acc-header:hover {
 .mx-spinner {
   width: 28px;
   height: 28px;
-  border: 3px solid rgba(0, 255, 102, 0.25);
+  border: 3px solid rgba(148, 226, 213, 0.25);
   border-top-color: var(--mx-green);
   border-radius: 50%;
   animation: mx-spin 0.7s linear infinite;
@@ -911,9 +911,9 @@ summary.mx-acc-header:hover {
   bottom: 0;
   z-index: 40;
   padding: 6px 10px;
-  background: rgba(2, 6, 2, 0.92);
-  border-top: 1px solid rgba(0, 170, 68, 0.85);
-  color: rgba(0, 255, 102, 0.92);
+  background: rgba(10, 25, 47, 0.92);
+  border-top: 1px solid rgba(30, 120, 110, 0.85);
+  color: rgba(148, 226, 213, 0.92);
   font-size: 12px;
   line-height: 1;
   letter-spacing: 0.2px;
@@ -957,7 +957,7 @@ summary.mx-acc-header:hover {
 .rpt-cat-label {
   display: inline-block;
   min-width: 140px;
-  color: #00e85c;
+  color: #94e2d5;
   font-weight: bold;
   font-size: 11px;
 }
@@ -969,15 +969,15 @@ summary.mx-acc-header:hover {
 }
 
 .rpt-day--on {
-  color: rgba(0, 220, 88, 0.80);
+  color: rgba(148, 226, 213, 0.80);
   text-shadow: none;
   -webkit-text-stroke: 0px;
 }
 
 .rpt-day--off {
-  color: rgba(0, 185, 72, 0.70);
+  color: rgba(30, 120, 110, 0.70);
   text-shadow: none;
-  -webkit-text-stroke: 0.6px rgba(0, 185, 72, 0.90);
+  -webkit-text-stroke: 0.6px rgba(30, 120, 110, 0.90);
 }
 
 /* Reduced motion */

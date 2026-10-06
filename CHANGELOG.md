@@ -1,10 +1,31 @@
 ## Unreleased
 
-## 1.14.2 - 2026-09-22
+## 2.0.0 - 2026-10-07
+
+### Theme
+
+- Catppuccin Mocha color theme: replaced harsh neon colors with a softer palette
+- Ocean: deep navy blue `#0a192f`
+- Land: muted green `#1e5a3e`
+- UI accent: teal `#94e2d5`
+- Connection markers: mauve `#cba6f7`, blue `#89b4fa`, peach `#fab387`
 
 ### Distribution
 
-- Make TapMap available through the official Homebrew Cask repository with `brew install --cask tapmap`.
+- Reduced to Linux (.deb) and Docker only (GHCR)
+- Removed Homebrew, Windows and macOS builds
+- Docker images published to GitHub Container Registry
+
+### CI/CD
+
+- Simplified GitHub Actions: Linux + Docker only
+- GHCR multi-arch images (linux/amd64, linux/arm64)
+
+### Notes
+
+Personal fork with custom colors. Developed with help from opencode and Qwen3.6.
+
+## 1.14.2 - 2026-09-22
 
 ### Fixes
 

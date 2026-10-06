@@ -374,19 +374,19 @@ def render_help() -> list[Any]:
                     [
                         html.Tr(
                             [
-                                html.Td(html.Span("■", style={"color": "#00ff66"})),
+                                html.Td(html.Span("■", style={"color": "#94e2d5"})),
                                 html.Td("Verified: Verification succeeded."),
                             ]
                         ),
                         html.Tr(
                             [
-                                html.Td(html.Span("■", style={"color": "#ff4444"})),
+                                html.Td(html.Span("■", style={"color": "#f38ba8"})),
                                 html.Td("Failed: Verification failed."),
                             ]
                         ),
                         html.Tr(
                             [
-                                html.Td(html.Span("■", style={"color": "#ffff00"})),
+                                html.Td(html.Span("■", style={"color": "#f9e2af"})),
                                 html.Td(
                                     "Unknown or unavailable: Verification could not be completed."
                                 ),
@@ -394,7 +394,7 @@ def render_help() -> list[Any]:
                         ),
                         html.Tr(
                             [
-                                html.Td(html.Span("■", style={"color": "#ffffff"})),
+                                html.Td(html.Span("■", style={"color": "#cdd6f4"})),
                                 html.Td("Retrieving...: Verification is in progress."),
                             ]
                         ),
