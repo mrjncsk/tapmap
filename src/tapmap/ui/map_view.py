@@ -290,8 +290,8 @@ class MapUI:
         )
         fig.update_layout(
             margin=dict(l=0, r=0, t=0, b=0),
-            paper_bgcolor="black",
-            plot_bgcolor="black",
+            paper_bgcolor="#0a192f",
+            plot_bgcolor="#0a192f",
             showlegend=False,
             clickmode="event",
             hovermode="closest",
